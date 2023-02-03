@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
 	return (
-		<div>
+		<div className=''>
 			<h1 className="text-3xl font-bold underline text-center">
 				Hello world!
 			</h1>
