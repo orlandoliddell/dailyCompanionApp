@@ -1,9 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { motion as m} from 'framer-motion'; 
 
 const Signin = () => {
 	return (
-		<div className="max-w-[700px] mx-auto my-16 p-4">
+		<m.div  initial={{ opacity:0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.75,ease: "easeOut"}}
+            className="max-w-[700px] mx-auto my-16 p-4">
 			<h1 className="text-2xl font-bold py-2">Sign into your account</h1>
 			<p className="py-2">
 				Don't have an account yet?{" "}
@@ -28,7 +32,7 @@ const Signin = () => {
 					Login
 				</button>
 			</form>
-		</div>
+		</m.div>
 	)
 }
 
