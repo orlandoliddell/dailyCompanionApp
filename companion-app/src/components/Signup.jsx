@@ -6,15 +6,15 @@ const Signup = () => {
 	return (
 		<m.div
 			initial={{ width: 0 }}
-			animate={{ width: "100%" }}
-			exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
+			animate={{ width: "100%",  }}
+			exit={{ x: window.innerWidth, transition: { duration:  0.5 } }}
 			className="bg-red-100 top-0 left-0 w-full h-full absolute"
 		>
 			<div className="max-w-[700px] mx-auto my-16 p-4">
 				<h1 className="text-2xl font-bold py-2">Signup for free</h1>
 				<p className="py-2">
 					Already have an account?{" "}
-					<Link to="/" className="underline">
+					<Link to="/" className="underline hover:text-blue-500">
 						Sign in
 					</Link>
 				</p>
