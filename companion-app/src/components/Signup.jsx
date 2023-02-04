@@ -1,13 +1,18 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { motion as m } from "framer-motion"
+import { useState } from "react"
 
 const Signup = () => {
+	const [email, setEmail] = useState("")
+	const [password, setPassword] = useState("")
+	const [error, setError] = useState("")
+
 	return (
 		<m.div
 			initial={{ width: 0 }}
-			animate={{ width: "100%",  }}
-			exit={{ x: window.innerWidth, transition: { duration:  0.5 } }}
+			animate={{ width: "100%" }}
+			exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
 			className="bg-red-100 top-0 left-0 w-full h-full absolute"
 		>
 			<div className="max-w-[700px] mx-auto my-16 p-4">
@@ -19,16 +24,16 @@ const Signup = () => {
 					</Link>
 				</p>
 
-				<form>
+				<form onSubmit={handleSubmit}>
 					<div className="flex flex-col py-2">
 						<label className="py-2 font-medium">
 							Email Address
 						</label>
-						<input className="border p-3" type="email" />
+						<input onChange={(e) => setEmail(e, target, value)} className="border p-3" type="email" />
 					</div>
 					<div className="flex flex-col py-2">
 						<label className="py-2 font-medium">Password</label>
-						<input className="border p-3" type="password" />
+						<input onChange={(e) => setPassword(e, target, value)}className="border p-3" type="password" />
 					</div>
 					<button
 						className=" border border-blue-500 w-full p-4 my-2 rounded-lg text-white cursor-pointer bg-gradient-to-r from-green-400 to-blue-500
