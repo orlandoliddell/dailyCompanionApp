@@ -6,9 +6,9 @@ const Signin = () => {
 	return (
 		<m.div
 			initial={{ width: 0 }}
-			animate={{ width: "100%", }}
+			animate={{ width: "100%" }}
 			exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
-			className="bg-orange-100 top-0 left-0 w-full h-full absolute"
+			className="bg-orange-100 top-0 left-0 w-full h-full absolute "
 		>
 			<div className="max-w-[700px] mx-auto my-16 p-4">
 				<h1 className="text-2xl font-bold py-2">
@@ -16,7 +16,10 @@ const Signin = () => {
 				</h1>
 				<p className="py-2">
 					Don't have an account yet?{" "}
-					<Link to="/signup" className="underline hover:text-blue-500">
+					<Link
+						to="/signup"
+						className="underline hover:text-blue-500"
+					>
 						Sign up
 					</Link>
 				</p>
